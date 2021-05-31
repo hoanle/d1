@@ -6,4 +6,4 @@ before_install:
   - docker build -t hoanlezuhlke/d1 -f Dockerfile.dev .
 
 scripts:
-  - docker run hoanlezuhlke/d1 npm run test -- --coverage
+  - docker run -e CI=true hoanlezuhlke/d1 npm run test -- --coverage
